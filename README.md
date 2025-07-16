@@ -3,13 +3,13 @@
 Welcome to **Tuition Hub**, an Android mobile application designed to streamline and automate operations within tuition institutes. This project focuses on simplifying tasks for **admins**, **teachers**, and **students** through a single intuitive platform.
 
 
-![Screenshot](https://github.com/AmjadAzward/Tution_Hub/blob/main/Extra/Images/Screenshot%202025-07-15%20043600.png?raw=true)
+![Screenshot 1](https://github.com/Ilmaa2003/Tution-Hub/blob/main/Extra/Images/Screenshot%202025-07-15%20043600.png)
 
-![Screenshot](https://github.com/AmjadAzward/Tution_Hub/blob/main/Extra/Images/Screenshot%202025-07-15%20043746.png?raw=true)
+![Screenshot 2](https://github.com/Ilmaa2003/Tution-Hub/blob/main/Extra/Images/Screenshot%202025-07-15%20043746.png)
 
-![Screenshot](https://github.com/AmjadAzward/Tution_Hub/blob/main/Extra/Images/Screenshot%202025-07-14%20191812.png?raw=true)
+![Screenshot 3](https://github.com/Ilmaa2003/Tution-Hub/blob/main/Extra/Images/Screenshot%202025-07-14%20191812.png)
 
-![Screenshot](https://github.com/AmjadAzward/Tution_Hub/blob/main/Extra/Images/Screenshot%202025-07-14%20191740.png?raw=true)
+![Screenshot 4](https://github.com/Ilmaa2003/Tution-Hub/blob/main/Extra/Images/Screenshot%202025-07-14%20191740.png)
 
 ---
 
