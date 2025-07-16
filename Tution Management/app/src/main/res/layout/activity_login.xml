@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="110dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="App Logo"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- New instruction text below title -->
+        <TextView
+            android:id="@+id/tvNewUserInstruction"
+            android:layout_width="331dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="12dp"
+            android:text="If you are new to the system, use 1234 as password with your registered email to institute"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <!-- Subtitle -->
+
+        <!-- Email Input -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:maxWidth="180dp"
+            android:text="You can sign in with your registered email address and password"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Email address"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            android:textColor="#000000"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            android:textColor="#000000"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="280dp"
+            android:layout_height="47dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1E40AF"
+            android:layout_gravity="end"
+            android:layout_marginRight="47dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Create account -->
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No account? Create one"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+</ScrollView>

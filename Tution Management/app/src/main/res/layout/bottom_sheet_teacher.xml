@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Teacher"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_color1"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:hint="e.g. John Doe"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Address -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_edit_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_color1"
+
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:hint="e.g. Colombo"
+            android:layout_marginBottom="12dp" />
+
+        <!-- DOB -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_edit_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_color1"
+
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:hint="YYYY-MM-DD"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Phone -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_color1"
+
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:hint="07xxxxxxxx"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_color1"
+
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:hint="example@gmail.com"
+            android:layout_marginBottom="12dp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_save_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:backgroundTint="@color/dark_blue"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white">
+
+    <!-- Main Screen -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+            <!-- Sidebar Toggle -->
+            <ImageButton
+                android:id="@+id/toggle_sidebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Toggle sidebar"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Tabs -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tab_glass"
+                android:elevation="6dp"
+                android:padding="6dp"
+                app:tabIndicatorColor="@color/dark_blue"
+                app:tabSelectedTextColor="@color/dark_blue"
+                app:tabTextColor="@color/light_color" />
+
+            <!-- Search -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search users..."
+                android:iconifiedByDefault="false"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:background="@android:color/white"
+                android:elevation="2dp" />
+
+            <!-- TopBar with Delete Icon (Visible on selection) -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/selection_toolbar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_color"
+                app:titleTextColor="@android:color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageButton
+                    android:id="@+id/btn_delete_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="Delete Selected"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="end"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Deletion bar: visible only when selection active -->
+            <LinearLayout
+                android:id="@+id/deletion_bar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/dark_blue"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_selected_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 selected"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btn_delete_selected_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="Delete Selected"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_user_cards"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
+        <!-- FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:contentDescription="Add new user"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/dark_blue"
+            app:srcCompat="@drawable/ic_add" />
+    </FrameLayout>
+
+    <!-- Sidebar navigation -->
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:layout_gravity="start"
+        android:elevation="8dp"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle">
+
+        <!-- Branding Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_placeholder_logo"
+                android:contentDescription="Logo" />
+
+        </LinearLayout>
+
+        <!-- User Info -->
+
+        <!-- Navigation Items -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Dashboard -->
+            <LinearLayout
+                android:id="@+id/nav_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_dashboard"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard"
+                    android:textColor="@color/dark_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Users -->
+            <LinearLayout
+                android:id="@+id/nav_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_users"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users"
+                    android:textColor="@color/dark_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Reports -->
+            <LinearLayout
+                android:id="@+id/nav_reports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_report1"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reports"
+                    android:textColor="@color/dark_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!-- Courses -->
+            <LinearLayout
+                android:id="@+id/nav_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_courses"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Courses"
+                    android:textColor="@color/dark_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Payments -->
+            <LinearLayout
+                android:id="@+id/nav_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_payments"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payments"
+                    android:textColor="@color/dark_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Settings -->
+        </LinearLayout>
+
+        <!--  Logout at bottom -->
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

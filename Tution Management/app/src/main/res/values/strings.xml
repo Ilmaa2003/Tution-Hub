@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Tution Management</string>
+    <string name="welcome_back_dr_samantha_perera">Welcome back, Dr. Samantha Perera</string>
+    <string name="here_s_what_s_happening_with_your_tuition_center_today">Here\'s what\'s happening with your tuition center today</string>
+    <string name="total_students">Total Students</string>
+    <string name="_1_842">1,842</string>
+    <string name="_12_from_last_month">+12% from last month</string>
+    <string name="dr_s_perera">Dr. S. Perera</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="users">Users</string>
+    <string-array name="bulk_actions">
+        <item>Send Notification</item>
+        <item>Change Role</item>
+        <item>Deactivate Users</item>
+        <item>Delete Selected</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>

@@ -1,0 +1,79 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_course"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header: Course info -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvCourseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Course Name"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grade"
+                android:layout_marginEnd="16dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvBatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batch"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Expandable section (initially gone) -->
+        <LinearLayout
+            android:id="@+id/expandable_section"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp">
+
+            <!-- Add Assignments Button -->
+            <Button
+                android:id="@+id/btnAddAssignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Assignment" />
+
+            <!-- Add Course Material Button -->
+            <Button
+                android:id="@+id/btnAddCourseMaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Course Material"
+                android:layout_marginTop="8dp" />
+
+            <!-- You can add more UI for showing uploaded files or camera previews here -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

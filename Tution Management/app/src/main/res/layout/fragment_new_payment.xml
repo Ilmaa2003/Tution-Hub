@@ -1,0 +1,174 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Select Course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_course"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Select Grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_grade"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Select Batch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_batch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:text="Select Teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/et_description"
+            android:hint="Enter Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:text="Select Payment Month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Select Payment Year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Attach Payment Slip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/img_payment_slip"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_camera_alt"
+            android:background="@drawable/imageview_border"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <Button
+            android:id="@+id/btn_remove_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Image"
+            android:textAllCaps="false"
+            android:backgroundTint="#B00020"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"/>
+
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Submit Payment"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
+
+    </LinearLayout>
+</ScrollView>

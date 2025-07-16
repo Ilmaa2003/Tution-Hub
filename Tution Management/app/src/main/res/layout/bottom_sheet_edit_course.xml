@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle"
+        android:dividerPadding="12dp"
+        android:paddingBottom="32dp">
+
+        <!-- Course -->
+        <TextView
+            android:text="Select Course"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/spinner_course"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_course"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Add Course"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:layout_marginStart="12dp"
+                app:tint="@color/dark_blue" />
+        </LinearLayout>
+
+        <!-- Grade -->
+        <TextView
+            android:text="Select Grade"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinner_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp" />
+
+        <!-- Batch -->
+        <TextView
+            android:text="Select Batch"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/spinner_batch"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_batch"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Add Batch"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:layout_marginStart="12dp"
+                app:tint="@color/dark_blue" />
+        </LinearLayout>
+
+        <!-- Teacher -->
+        <TextView
+            android:text="Select Teacher"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/spinner_teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_teacher"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Add Teacher"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:layout_marginStart="12dp"
+                app:tint="@color/dark_blue" />
+        </LinearLayout>
+
+        <!-- Students -->
+        <TextView
+            android:text="Select Students"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ListView
+                android:id="@+id/listview_students"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:choiceMode="multipleChoice"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_add_student"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Add Student"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="12dp"
+                android:layout_marginStart="12dp"
+                app:tint="@color/dark_blue" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:text="Description"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Description"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp" />
+
+        <!-- Schedule -->
+        <TextView
+            android:text="Schedule"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_fixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fixed" />
+
+            <RadioButton
+                android:id="@+id/radio_customized"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customized" />
+        </RadioGroup>
+
+        <!-- Fixed Schedule -->
+        <LinearLayout
+            android:id="@+id/layout_fixed_schedule"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:text="Day of the Week"
+                android:paddingBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner_day_of_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="Start Time"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TimePicker
+                android:id="@+id/timepicker_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:text="End Time"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TimePicker
+                android:id="@+id/timepicker_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:text="Extra Classes"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingTop="16dp"
+                android:paddingBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CalendarView
+                android:id="@+id/calendar_extra_classes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Extra Classes List"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingTop="12dp"
+                android:paddingBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/listview_extra_classes"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white"
+                android:nestedScrollingEnabled="true" />
+        </LinearLayout>
+
+        <!-- Customized Schedule -->
+        <LinearLayout
+            android:id="@+id/layout_customized_schedule"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:text="Select Dates"
+                android:paddingBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CalendarView
+                android:id="@+id/calendar_customized"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/listview_customized_classes"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white"
+                android:nestedScrollingEnabled="true" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btn_save_course"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/dark_blue"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:drawablePadding="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

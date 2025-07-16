@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/edittext_background"
+    android:minWidth="280dp">
+
+    <TextView
+        android:text="Start Time"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TimePicker
+        android:id="@+id/timepicker_start"
+        android:layout_width="220dp"
+        android:layout_height="144dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:text="End Time"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <TimePicker
+        android:id="@+id/timepicker_end"
+        android:layout_width="219dp"
+        android:layout_height="133dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:text="Description (optional)"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/et_description"
+        android:hint="Notes about this extra class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:inputType="textMultiLine"/>
+</LinearLayout>
